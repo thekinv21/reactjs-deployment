@@ -63,21 +63,23 @@ NGINX - web sunucuda ( YAYICI ) olarak görev yapmaktadır, örneğin bir sunucu
 
 #### ÖNEMLİ
 
-```
-Web sunucuda default olarak apache2 kurulu geliyor olabilir , biz NGINX kurmak istediğimizde ikisi arasında CONFLICT olabilir,
+
+- Web sunucuda default olarak apache2 kurulu geliyor olabilir , biz NGINX kurmak istediğimizde ikisi arasında CONFLICT olabilir,
 eğer Sunucuya NGINX kurmak istiyorsanız APACHE2'yi silmeniz gerekiyor
 
 NOTE: sunucuda apache2 kurulu olup olmadığını öğrenmek için şu komutu terminalinizde yazmanız gerekmektedir 
 
+
+```
 systemctl status apache2
-
 ```
 
+##
 
-```
-Eğer sunucuda APACHE2 var ise ve siz NGINX kullanmak istiyorsanız
+
+- Eğer sunucuda APACHE2 var ise ve siz NGINX kullanmak istiyorsanız
 aşağıdaki komutları yazarak web sunucunuzdan apache2'yi kaldırabilirsiniz..
-```
+
 
 
 #### APACHE2 silme adımları
@@ -197,7 +199,7 @@ NVM, Node.js geliştirme sürecinde ortaya çıkabilecek sürüm uyumsuzlukları
 #### NVM'in Kurulması
 
 ```
-- wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 ```
 
 - Nvm kurulduktan sonra aşağıdaki kodu da çalıştırmalısınız
