@@ -1,12 +1,6 @@
 
 # Deploy a React App To a VPS | Ubuntu 20.04 Server With NGINX
 
-
-- [REACTJS](https://www.github.com/octokatherine)
-- [NEXTJS](https://www.github.com/octokatherine)
-- [Spring Boot](https://www.github.com/octokatherine)
-
-
 Deploy etmek için hazırlanan dokümantasyondur ve bu süreçte nasıl bir yol izleneceğini hakkında bilgi edinerek yapılmıştır...
 
 
