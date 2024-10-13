@@ -35,7 +35,8 @@ Note: HOSTNAME olarak istediğinizi verebilirsiniz..
 Satın alım işleminden sonra size aşağıdaki gibi bir e-mail gelecektir..
 
 
-![Ekran Resmi 2024-07-13 12 02 05](https://github.com/user-attachments/assets/11be1f31-cb55-40b7-ba16-30de9517e120)
+
+![Ekran Resmi 2024-10-13 23 46 09](https://github.com/user-attachments/assets/9976edf7-9803-4939-bc79-c837331e4c43)
 
 
 
@@ -318,9 +319,7 @@ Buradan kendiniz istediğiniz dns alabilirsiniz ve ayarlarını yapabilirsiniz
 
 ### DNS adresi aldıktan sonra aşağıdaki ayarları yapmanız gerekmektedir..
 
-![Ekran Resmi 2024-07-13 17 13 01](https://github.com/user-attachments/assets/a4cd8cc4-1a9f-4ea8-8ddc-7c277da31961)
-
-
+![Ekran Resmi 2024-10-13 23 41 48](https://github.com/user-attachments/assets/0c8ad301-410f-441f-85a3-028cf9300ab9)
 
 
 ##
@@ -337,7 +336,8 @@ sudo nano /etc/nginx/sites-available/default
 
 Nginx Konfigürasyonu ayarları aşağıdaki resimde gösterilmiştir
 
-![nginix](https://github.com/user-attachments/assets/6740993c-b250-444c-aa11-7085df3ae49b)
+![Ekran Resmi 2024-10-13 23 51 20](https://github.com/user-attachments/assets/194a4535-05aa-40e8-8715-50fe040762c6)
+
 
 
 ## Certbot ve SSL Ayarlarının Yapılması
