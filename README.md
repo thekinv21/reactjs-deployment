@@ -336,8 +336,7 @@ sudo nano /etc/nginx/sites-available/default
 
 Nginx Konfigürasyonu ayarları aşağıdaki resimde gösterilmiştir
 
-![Ekran Resmi 2024-10-13 23 51 20](https://github.com/user-attachments/assets/194a4535-05aa-40e8-8715-50fe040762c6)
-
+![image](https://github.com/user-attachments/assets/f9e11804-8eeb-4a1b-98ae-7efe5e68c2b5)
 
 
 ## Certbot ve SSL Ayarlarının Yapılması
@@ -375,94 +374,44 @@ Nginx Konfigürasyonu ayarları aşağıdaki resimde gösterilmiştir
 ### ÖNEMLİ ADIMLAR BUNU TAKİP ETMELİYİZ
 
 
-1) `/home/alwyzon` altına bir tane klasör oluştur:
-
-    - mkdir react-deployment ( Bizim klasör adı )
-
-![Ekran Resmi 2024-07-13 19 59 03](https://github.com/user-attachments/assets/bf51aaca-5579-4178-948e-4fb78769c3b8)
-
-##
-
-2) Oluşturduğumuz klasörü public hale getirmeliyiz
-
-       chmod 777 react-deployment/
-
-![Ekran Resmi 2024-07-13 20 02 26](https://github.com/user-attachments/assets/6f1a24f6-4a50-4d65-a238-e1c96dcea8bb)
-
-Not: eğer dosya public olduysa yeşil renkte olacaktir..
-
-###
-
-3) Oluştuduğumuz klasörün altına Git repositorimizi klon etmeliyiz
+1) `/home/alwyzon` altına Git respositorinizi klonlayınız:
 
        git clone repository_url_ssh
 
-![Ekran Resmi 2024-07-13 20 05 57](https://github.com/user-attachments/assets/739dc9aa-f8e4-4ea5-a0e3-559d9bd6c3cb)
 
-
-###
-
-4) Klonlandığımız repositorinin klasörünü public hale getirmeliyiz
-
-       chmod 777 deployment/
-
-![Ekran Resmi 2024-07-13 20 07 44](https://github.com/user-attachments/assets/c793700a-9f1c-4dd4-9cb6-19b7842a6a24)
-
-
-### 
-
-
-5) Repository klasörünün içine girip onu pull etmeliyiz
+2) Repository klasörünün içine girip onu pull etmeliyiz
 
        git pull
 
-![Ekran Resmi 2024-07-13 20 09 02](https://github.com/user-attachments/assets/8ea5e861-82c3-4568-ad29-4ec02434ca95)
 
-###
+3) Npm install ile bütün paketleri indirmeliyiz
 
-6) Npm install ile bütün paketleri indirmeliyiz
+       npm install
 
-       npm install --legacy-peer-deps
-
-![Ekran Resmi 2024-07-13 20 10 44](https://github.com/user-attachments/assets/5874438f-d9cf-413d-8ba7-7cc08efe3037)
-
-###
-
-7) Projeyi build etmeliyiz
+4) Projeyi build etmeliyiz
 
        npm run build
 
-![Ekran Resmi 2024-07-13 20 15 29](https://github.com/user-attachments/assets/95ad630c-5566-43a5-b68e-8b980cfb9050)
-
-
 ###
 
-8) Projenin ismi ile aynı isimde olan klasör oluşturup onu `/var/www/` klasörü altına eklemeliyiz
+5) Nginx conf içinde vermiş olduğumuz root adı ile aynı isimde olan klasör oluşturup onu `/var/www/` klasörü altına eklemeliyiz
 
-       sudo mkdir /var/www/deployment ( deployment bizim proje repository klasör adı )
-
-![Ekran Resmi 2024-07-13 20 18 55](https://github.com/user-attachments/assets/b5c1eff3-8675-494d-a1d5-f676bc3d3875)
+       sudo mkdir /var/www/reactjs-deployment ( reactjs-deployment bizim nginx conf içinde root adına verdiğimiz klasör adı )
 
 
+6) Projenin build ettikten sonra dist dosyası vardır o dosyayı oluşturduğumuz dosyanın altına koymalıyız
+   
+ - Bu işlemi yaparken Git projenizin dosyasının içinde yapmalısınız
+   
+       sudo cp -r dist/* /var/www/reactjs-deployment/
 
 
-###
 
-9) Projenin build ettikten sonra dist dosyası vardır o dosyayı oluşturduğumuz dosyanın altına koymalıyız
-
-       sudo cp -r dist/* /var/www/deployment/
+7) Bu işlemleri yaptıktan sonra projeniz başarıyla deploy edilmiş olacaktir
 
 
-![Ekran Resmi 2024-07-13 20 23 52](https://github.com/user-attachments/assets/4f6dc35c-525c-487d-88df-53f1d55acfcd)
+![image](https://github.com/user-attachments/assets/c3aae139-fdc9-4535-824f-a44d77eaa218)
 
-
-###
-
-10) Bu işlemleri yaptıktan sonra projeniz başarıyla deploy edilmiş olacaktir
-
-    
-
-![Ekran Resmi 2024-07-13 20 26 04](https://github.com/user-attachments/assets/4eef8a5b-1610-4cd7-9069-a27b6a688035)
 
  
 
